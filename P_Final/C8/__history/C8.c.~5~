@@ -1,0 +1,81 @@
+#include <16f887.h>
+#fuses INTRC_IO, NOWDT, PROTECT, NOLVP, MCLR, NOBROWNOUT
+#use delay(INTERNAL=4000000)
+#use rs232(baud=9600, xmit=PIN_C6, rcv=PIN_C7)
+
+#include <lcd.c>
+
+#define LED1 PIN_B0    // Definimos el primer LED en el pin B0
+#define LED2 PIN_B1    // Definimos el segundo LED en el pin B1
+#define PIR_SENSOR PIN_A0  // Pin para el sensor PIR
+
+void main() {
+    char comando;  // Variable para almacenar el comando recibido vía serie
+    lcd_init();  
+    setup_adc_ports(NO_ANALOGS);  
+    set_tris_b(0b11111100);  // Configurar RB0 y RB1 como salidas; el resto como entradas
+    set_tris_c(0b11111111);  // Configurar todo el puerto C como entradas, para leer el PIR
+
+    while (true) {
+        if (kbhit()) {  
+            comando = getc();  // Leer el comando recibido
+            // Instrucciones para cada comando recibido
+            switch (comando) {
+                // Apagar LED 1
+                case '2':
+                    output_low(LED1); 
+                    lcd_gotoxy(1, 1);
+                    printf(lcd_putc, "LED1: -Apagado-");
+                    printf("Comando '2': LED1 Apagado\r\n");
+                    break;
+
+                // Encender LED 1
+                case '1':
+                    output_high(LED1);  
+                    lcd_gotoxy(1, 1);
+                    printf(lcd_putc, "LED1: Encendido");
+                    printf("Comando '1': LED1 Encendido\r\n");
+                    break;
+
+                // Encender LED 2 (Comando por terminal)
+                case '3':
+                    output_high(LED2);  
+                    lcd_gotoxy(1, 2);
+                    printf(lcd_putc, "LED2: Encendido");
+                    printf("Comando '3': LED2 Encendido\r\n");
+                    break;
+
+                // Apagar LED 2 (Comando por terminal)
+                case '4':
+                    output_low(LED2);  
+                    lcd_gotoxy(1, 2);
+                    printf(lcd_putc, "LED2: -Apagado-");
+                    printf("Comando '4': LED2 Apagado\r\n");
+                    break;
+
+                default:
+                    printf("Error\r\n");  // En caso de comando no reconocido
+                    break;
+            }
+        }
+
+        // Leer el estado del sensor PIR y encender o apagar LED2
+        if (input(PIR_SENSOR)) {  // Si el sensor PIR detecta movimiento (HIGH)
+            output_high(LED2);
+            lcd_gotoxy(1, 2);
+            printf(lcd_putc, "LED2: Encendido (PIR)");
+            printf("Movimiento Detectado. LED2 Encendido\r\n");
+        } else {  // Si no hay movimiento (LOW)
+            // Solo apagar el LED2 si no está siendo controlado por el comando
+            if (comando != '3' && comando != '4') {
+                output_low(LED2);
+                lcd_gotoxy(1, 2);
+                printf(lcd_putc, "LED2: -Apagado-");
+                printf("Comando por PIR: LED2 Apagado\r\n");
+            }
+        }
+
+        delay_ms(400);  // Esperar un poco para no saturar el microcontrolador
+    }
+}
+

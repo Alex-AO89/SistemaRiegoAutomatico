@@ -1,0 +1,40 @@
+C:\Users\LenovoTC\source\repos\C8\C8\bin\Debug\C8.exe.config
+C:\Users\LenovoTC\source\repos\C8\C8\bin\Debug\C8.exe
+C:\Users\LenovoTC\source\repos\C8\C8\bin\Debug\C8.pdb
+C:\Users\LenovoTC\source\repos\C8\C8\obj\Debug\C8.csproj.AssemblyReference.cache
+C:\Users\LenovoTC\source\repos\C8\C8\obj\Debug\C8.Form1.resources
+C:\Users\LenovoTC\source\repos\C8\C8\obj\Debug\C8.Properties.Resources.resources
+C:\Users\LenovoTC\source\repos\C8\C8\obj\Debug\C8.csproj.GenerateResource.cache
+C:\Users\LenovoTC\source\repos\C8\C8\obj\Debug\C8.csproj.CoreCompileInputs.cache
+C:\Users\LenovoTC\source\repos\C8\C8\obj\Debug\C8.exe
+C:\Users\LenovoTC\source\repos\C8\C8\obj\Debug\C8.pdb
+E:\DocLap\Semestre 7\Micros\C8\C8\C8\bin\Debug\C8.exe.config
+E:\DocLap\Semestre 7\Micros\C8\C8\C8\bin\Debug\C8.exe
+E:\DocLap\Semestre 7\Micros\C8\C8\C8\bin\Debug\C8.pdb
+E:\DocLap\Semestre 7\Micros\C8\C8\C8\obj\Debug\C8.csproj.AssemblyReference.cache
+E:\DocLap\Semestre 7\Micros\C8\C8\C8\obj\Debug\C8.Form1.resources
+E:\DocLap\Semestre 7\Micros\C8\C8\C8\obj\Debug\C8.Properties.Resources.resources
+E:\DocLap\Semestre 7\Micros\C8\C8\C8\obj\Debug\C8.csproj.GenerateResource.cache
+E:\DocLap\Semestre 7\Micros\C8\C8\C8\obj\Debug\C8.csproj.CoreCompileInputs.cache
+E:\DocLap\Semestre 7\Micros\C8\C8\C8\obj\Debug\C8.exe
+E:\DocLap\Semestre 7\Micros\C8\C8\C8\obj\Debug\C8.pdb
+C:\Users\DELL\Documents\ProyectoMicrosF\P_Final1\P_Final\C8\bin\Debug\C8.exe.config
+C:\Users\DELL\Documents\ProyectoMicrosF\P_Final1\P_Final\C8\bin\Debug\C8.exe
+C:\Users\DELL\Documents\ProyectoMicrosF\P_Final1\P_Final\C8\bin\Debug\C8.pdb
+C:\Users\DELL\Documents\ProyectoMicrosF\P_Final1\P_Final\C8\obj\Debug\C8.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\ProyectoMicrosF\P_Final1\P_Final\C8\obj\Debug\C8.Properties.Resources.resources
+C:\Users\DELL\Documents\ProyectoMicrosF\P_Final1\P_Final\C8\obj\Debug\C8.Form1.resources
+C:\Users\DELL\Documents\ProyectoMicrosF\P_Final1\P_Final\C8\obj\Debug\C8.csproj.GenerateResource.cache
+C:\Users\DELL\Documents\ProyectoMicrosF\P_Final1\P_Final\C8\obj\Debug\C8.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\ProyectoMicrosF\P_Final1\P_Final\C8\obj\Debug\C8.exe
+C:\Users\DELL\Documents\ProyectoMicrosF\P_Final1\P_Final\C8\obj\Debug\C8.pdb
+C:\Users\DELL\Documents\ProyectoMicrosF1 - copia\P_Final1\P_Final\C8\bin\Debug\C8.exe.config
+C:\Users\DELL\Documents\ProyectoMicrosF1 - copia\P_Final1\P_Final\C8\bin\Debug\C8.exe
+C:\Users\DELL\Documents\ProyectoMicrosF1 - copia\P_Final1\P_Final\C8\bin\Debug\C8.pdb
+C:\Users\DELL\Documents\ProyectoMicrosF1 - copia\P_Final1\P_Final\C8\obj\Debug\C8.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\ProyectoMicrosF1 - copia\P_Final1\P_Final\C8\obj\Debug\C8.Properties.Resources.resources
+C:\Users\DELL\Documents\ProyectoMicrosF1 - copia\P_Final1\P_Final\C8\obj\Debug\C8.csproj.GenerateResource.cache
+C:\Users\DELL\Documents\ProyectoMicrosF1 - copia\P_Final1\P_Final\C8\obj\Debug\C8.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\ProyectoMicrosF1 - copia\P_Final1\P_Final\C8\obj\Debug\C8.exe
+C:\Users\DELL\Documents\ProyectoMicrosF1 - copia\P_Final1\P_Final\C8\obj\Debug\C8.pdb
+C:\Users\DELL\Documents\ProyectoMicrosF1 - copia\P_Final1\P_Final\C8\obj\Debug\C8.Form1.resources

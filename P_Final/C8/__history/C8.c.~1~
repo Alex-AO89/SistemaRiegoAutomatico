@@ -1,0 +1,73 @@
+#include <16f887.h>
+#fuses INTRC_IO, NOWDT, PROTECT, NOLVP, MCLR, NOBROWNOUT
+#use delay(INTERNAL=4000000)
+#use rs232(baud=9600, xmit=PIN_C6, rcv=PIN_C7)
+
+#include <lcd.c>
+
+#define LED1 PIN_B0   // Definimos el primer LED en el pin B0
+#define Foco PIN_B1   // Definimos el Foco en el pin B1
+#define PIR_SENSOR PIN_A0   // Pin para el sensor PIR
+
+void main() {
+    char comando;  // Variable para almacenar el comando recibido vía serie
+    lcd_init();  
+    setup_adc_ports(NO_ANALOGS);  
+    set_tris_b(0b11111100);  // Configurar RB0 y RB1 como salidas; el resto como entradas
+    set_tris_a(0b11111111);  // Configurar PA0 como entrada para el sensor PIR
+
+    while (true) {
+         //Control terminal
+        if (kbhit()) {  
+            comando = getc();  // Leer el comando recibido
+            // Instrucciones para cada comando recibido
+            switch (comando) {
+            //APAGAR LED 1
+                case '2':
+                    output_low(LED1); 
+                    lcd_gotoxy(1, 1);
+                    printf(lcd_putc, "LED1: -Apagado-");
+                    printf("LED1 Apagado\n");
+                    break;
+            // Encender LED1
+                case '1':
+                    output_high(LED1);  
+                    lcd_gotoxy(1, 1);
+                    printf(lcd_putc, "LED1: Encendido");
+                    printf("LED1 Encendido\n");
+                    break;
+            // Encender Foco
+                case '3':
+                    output_high(Foco);
+                    lcd_gotoxy(1, 2);
+                    printf(lcd_putc, "LED2: Encendido");
+                    printf("LED2 Encendido\n");
+                    break;
+            // Apagar Foco
+                case '4':
+                    output_low(Foco);
+                    lcd_gotoxy(1, 2);
+                    printf(lcd_putc, "LED2: -Apagado-");
+                    printf("LED2 Apagado\n");
+                    break;
+
+
+            }
+
+        // PIR-Foco
+        if (input(PIR_SENSOR)) {  // Si el sensor PIR detecta movimiento
+            output_high(Foco);     // Encender el foco
+            lcd_gotoxy(1, 2);
+            printf(lcd_putc, "Movimiento Detectado");
+            printf("Foco Encendido por PIR\n");
+        } else {  // Si no se detecta movimiento
+            output_low(Foco);      // Apagar el foco
+            lcd_gotoxy(1, 2);
+            printf(lcd_putc, "Sin Movimiento");
+            printf("Foco Apagado\n");
+        }
+        }
+        delay_ms(400);  
+    }
+}
+
